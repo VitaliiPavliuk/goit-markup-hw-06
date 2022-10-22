@@ -689,6 +689,7 @@ img {
     background-color: var(--primary-bg-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+    padding: 40px;
 }
 
 .modal-close-btn {
@@ -706,14 +707,6 @@ img {
     align-items: center;
 
     cursor: pointer;
-
-    transition: border-color var(--transition-dur-and-func);
-}
-
-.modal-close-btn:hover,
-.modal-close-btn:focus {
-    outline: none;
-    border-color: var(--accent-color);
 }
 
 .modal-close-icon {
@@ -726,3 +719,95 @@ img {
 }
 
 /* ============== /MODAL WINDOW ============== */
+
+/* ============== MODAL FORM ============== */
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-header {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--primary-text-color);
+    margin-bottom: 12px;
+}
+
+.modal-field {
+    margin-bottom: 10px;
+}
+
+.modal-field-desc {
+    display: block;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: var(--secondary-text-color);
+    margin-bottom: 4px;
+}
+
+.modal-field-wrapper {
+    display: block;
+    position: relative;
+}
+
+.modal-field-input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding-left: 42px;
+    transition: border-color var(--transition-dur-and-func);
+}
+
+.modal-field-input:focus {
+    outline-offset: 4px;
+    border-color: var(--accent-color);
+}
+
+.modal-field-icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    fill: var(--primary-text-color);
+
+    transition: fill var(--transition-dur-and-func);
+}
+
+.modal-field-input:focus + .modal-field-icon {
+    fill: var(--accent-color);
+}
+
+.modal-comment {
+    width: 100%;
+    height: 120px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    resize: none;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
+
+    transition: border-color var(--transition-dur-and-func);
+}
+
+.modal-comment::placeholder {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+}
+
+.modal-comment:focus {
+    outline-offset: 4px;
+    border-color: var(--accent-color);
+}
+
+/* ============== /MODAL FORM ============== */
