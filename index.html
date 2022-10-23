@@ -356,7 +356,7 @@
     </footer>
 
     <!-- BACKDROP -->
-    <div class="backdrop" data-modal>
+    <div class="backdrop is-hidden" data-modal>
         <div class="modal">
             <button type="button" class="modal-close-btn" data-modal-close>
                 <svg width="18px" height="18px" class="modal-close-icon">
@@ -413,8 +413,15 @@
                         placeholder="Введіть текст"></textarea>
                 </label>
                 <label class="modal-checkbox-wrapper">
-                    <input type="checkbox" name="user_policy" class="modal-checkbox">
-                    Погоджуюся з розсилкою та приймаю <a href="">Умови договору</a>
+                    <input
+                        type="checkbox"
+                        name="user_policy"
+                        class="modal-checkbox visually-hidden"
+                        required>
+                    <svg width="16px" height="15px" class="modal-checkbox-svg">
+                        <use href="./images/icons.svg#icon-check"></use>
+                    </svg>
+                    Погоджуюся з розсилкою та приймаю&nbsp;<a href="" class="policy-link">Умови договору</a>
                 </label>
                 <button type="submit" class="modal-submit">Відправити</button>
             </form>
