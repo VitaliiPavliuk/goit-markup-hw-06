@@ -462,9 +462,12 @@ img {
 
 .container-footer {
     display: flex;
-    justify-content: space-between;
 
     align-items: baseline;
+}
+
+.address-container {
+    flex-grow: 1;
 }
 
 .contacts-footer {
@@ -509,6 +512,10 @@ img {
 
 .address-item {
     margin-bottom: 9px;
+}
+
+.join-container {
+    margin-right: 93px;
 }
 
 .social-media-footer {
@@ -795,6 +802,10 @@ img {
     margin-bottom: 10px;
 }
 
+.modal-textarea {
+    margin-bottom: 20px;
+}
+
 .modal-field-desc {
     display: block;
     font-weight: 400;
@@ -820,7 +831,7 @@ img {
 }
 
 .modal-field-input:focus {
-    outline-offset: 4px;
+    outline-offset: 2px;
     border-color: var(--accent-color);
 }
 
@@ -850,6 +861,8 @@ img {
     padding-right: 16px;
 
     transition: border-color var(--transition-dur-and-func);
+
+    display: block;
 }
 
 .modal-comment::placeholder {
@@ -860,7 +873,7 @@ img {
 }
 
 .modal-comment:focus {
-    outline-offset: 4px;
+    outline-offset: 2px;
     border-color: var(--accent-color);
 }
 
@@ -888,13 +901,14 @@ img {
     margin-right: 7px;
 }
 
+.modal-checkbox:focus + .modal-checkbox-svg {
+    outline: 2px solid black;
+}
+
 .modal-checkbox:checked + .modal-checkbox-svg {
     background-color: var(--accent-color);
     border-color: var(--accent-color);
-}
-
-.modal-checkbox:focus + .modal-checkbox-svg {
-    outline: 2px solid black;
+    outline: none;
 }
 
 .policy-link {
